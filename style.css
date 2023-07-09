@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("./pxfuel.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  padding: 20px 70px;
+  color: #fff;
+}
+
+.current-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.date-container {
+  font-weight: 100;
+}
+.date-container .time {
+  font-size: 70px;
+}
+
+.date-container #am-pm {
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.date-container .date {
+  font-size: 30px;
+}
+
+.place-container {
+  text-align: end;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    display: none;
+}
+
+.place-container .time-zone {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.place-container .country {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.current-info .others {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    160deg,
+    rgb(65, 127, 160, 0.6) 0%,
+    rgb(128, 208, 199, 0.6) 100%
+  );
+  padding: 10px;
+  border-radius: 15px;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  color: black !important;
+  font-weight: 500 !important;
+  font-size: 15px;
+}
+
+.current-info .others .weather-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.future-forecast {
+  margin-bottom: 0;
+  background: rgba(44, 62, 68, 0.8);
+  padding: 10px;
+  position: static;
+  bottom: 0;
+  display: flex;
+  color: white;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto !important;
+}
+
+  .future-forecast .today {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fbf5f5;
+  border-radius: 10px;
+  padding: 15px;
+  padding-right: 40px;
+  border-radius: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(39, 178, 185, 0.895),
+    transparent
+  );
+}
+
+.future-forecast .today .day {
+  padding: 5px 15px;
+  background: #3c3c44;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.future-forecast .today .temp {
+  font-size: 18px;
+  padding-top: 15px;
+}
+
+.future-forecast .weather-forecast {
+  display: flex;
+}
+
+.weather-forecast .weather-forecast-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  border: 1px solid #e9e3e3;
+  padding: 15px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, rgb(27, 99, 107), transparent);
+}
+
+.weather-forecast .weather-forecast-item .day {
+  padding: 5px 15px;
+  background: #3c3c44;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.weather-forecast .weather-forecast-item .temp {
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.weather-item .center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    160deg,
+    rgb(65, 127, 160, 0.6) 0%,
+    rgb(128, 208, 199, 0.6) 100%
+  );
+  padding: 15px;
+  border-radius: 15px;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  color: black !important;
+  font-weight: 500 !important;
+  font-size: 15px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.weather-container {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px transparent;
+  background: linear-gradient(90deg, #e3ffe7 0%, #adc1e2 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgb(2, 84, 80);
+}
+
+button {
+  background-color: #1e2d37;
+  background-image: linear-gradient(135deg, #142d1b 0%, #7f82b5 100%);
+  margin: 10px;
+  padding: 7px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+#weather-info {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    160deg,
+    rgba(46, 173, 241, 0.6) 0%,
+    rgba(48, 110, 103, 0.6) 100%
+  );
+  padding: 15px;
+  border-radius: 15px;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  color: black !important;
+  font-weight: 500 !important;
+  font-size: 15px;
+}
+
+.rainbow-text {
+  font-weight: 500 !important;
+  /* Create a conic gradient. */
+  /* Double percentages to avoid blur (#000 10%, #fff 10%, #fff 20%, ...). */
+  background: #ca4246;
+  background-color: #ca4246;
+  background: conic-gradient(
+    #ca4246 16.666%,
+    #e16541 16.666%,
+    #e16541 33.333%,
+    #f18f43 33.333%,
+    #f18f43 50%,
+    #8b9862 50%,
+    #8b9862 66.666%,
+    #476098 66.666%,
+    #476098 83.333%,
+    #a7489b 83.333%
+  );
+
+  /* Set thee background size and repeat properties. */
+  background-size: 57%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animate the text when loading the element. */
+  /* This animates it on page load and when hovering out. */
+  animation: rainbow-text-animation-rev 0.5s ease forwards;
+
+  cursor: pointer;
+}
+
+/* Add animation on hover. */
+.rainbow-text:hover {
+  animation: rainbow-text-animation 0.5s ease forwards;
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-animation {
+  0% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+}
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-animation-rev {
+  0% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .container {
+    padding: 20px;
+  }
+
+  .future-forecast {
+    justify-content: start;
+    align-items: none;
+    overflow-y: scroll;
+  }
+
+  .future-forecast .today .temp {
+    font-size: 16px;
+  }
+
+  .date-container .time {
+    font-size: 50px;
+  }
+
+  .date-container #am-pm {
+    font-size: 20px;
+  }
+
+  .date-container .date {
+    font-size: 20px;
+  }
+
+  .place-container {
+    text-align: end;
+    margin-top: 15px;
+  }
+
+  .place-container .time-zone {
+    font-size: 20px;
+  }
+
+  .current-info .others {
+    padding: 12px;
+  }
+
+  .current-info .others .weather-item {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .future-forecast {
+    justify-content: start;
+    align-items: none;
+    overflow-x: scroll;
+  }
+}
